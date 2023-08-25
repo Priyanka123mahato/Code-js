@@ -29,3 +29,26 @@ const myFunction = function(){
 }
 
 console.log(typeof myFunction)
+//******************************************************************** 
+//stack(primitive)   
+let myYoutubename="Chandrani Mahato"
+
+let anotherName=myYoutubename
+anotherName="priyanka"
+
+console.log(myYoutubename)
+console.log(anotherName)
+//In stack memory only copy pass, so real data will not change
+
+//Heap(Non-Primitive)
+let userOne={
+    email:"abc@gmsil.com",
+    upi:"user@ybl"
+}
+
+let userTwo=userOne
+userTwo.email="priya@gmail.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
+//In Heap reference will pass,means the real data will change
