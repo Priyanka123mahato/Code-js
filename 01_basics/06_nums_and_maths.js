@@ -23,9 +23,9 @@ console.log(Math.round(4.6))
 console.log(Math.ceil(4.2))
 console.log(Math.floor(4.9))
 
-console.log(Math.random())
-console.log((Math.random()*10)+1)
-console.log(Math.floor(Math.random()*10)+1)
+console.log(Math.random())//return value from 0-1
+console.log((Math.random()*10)+1)//shift the value in the left
+console.log(Math.floor(Math.random()*10)+1)//to take 0 use Math.floor() its given the floor value------to need value 1-9 we need to add 1
 
 const min=10
 const max=20
