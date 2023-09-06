@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            DOM learning
+        </title>
+        <style>
+            .bg-black{
+                background-color: black;
+                color:#fff
+            }
+        </style>
+    </head>
+    <body class="bg-black">
+        <div>
+           <h1 id="title" class="headings">DOM learning on chai aur code<span style="display:none;">Test text</span></h1>
+           <h2>Lorem ipsum dolor sit.</h2>
+           <h2>Lorem ipsum dolor sit.....</h2>
+           <h2>Lorem ipsum dolor sit2222</h2>
+           <p>Lorem ipsum dolor sit amet.</p>
+           <input type="password" name="" id="">
+
+           <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+           </ul>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- document.getElementById('title')
+<h1 id=​"title" class=​"headings">​DOM learning on chai aur code​</h1>
+​
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'headings'
+
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'headings'
+
+document.getElementById('title').setAttribute('class','test heading')
+undefined
+
+const title=document.getElementById('title')
+undefined
+
+title
+<h1 id=​"title" class=​"test heading">​DOM learning on chai aur code​</h1>
+​
+title.st
+undefined
+
+title.style.backgroundColor='green'
+'green'
+
+title.style.padding='15px'
+'15px'
+
+title.style.borderRadius='15px'
+'15px' -->
+
+
+
+<!--diff between innerText,textContent,innerHTML-->
+<!-- title.innerText
+'DOM learning on chai aur code'
+
+title.textContent
+'DOM learning on chai aur code\n            Test text\n           '
+
+title.innerHTML
+'DOM learning on chai aur code\n            <span style="display:none;">Test text</span>\n           ' -->
+
+
+
+
+<!-- use of querySelector -->
+<!-- document.querySelector('h2')
+<h2>​Lorem ipsum dolor sit.​</h2>====>select first h2 heading
+​
+document.querySelector('#title')
+<h1 id=​"title" class=​"headings">​…​</h1>
+​
+
+document.querySelector('.headings')
+<h1 id=​"title" class=​"headings">​…​</h1>
+​
+document.querySelector('input[type="password"]')===>select input type
+<input type=​"password" name id>​ -->
+
+
+
+
+<!-- select the first list inside ul -->
+<!-- document.querySelector('ul')
+<ul>​…​</ul>
+​
+const myul=document.querySelector('ul')
+undefined
+
+myul.querySelector('li')==>queryselector only select 1st list
+<li>​…​</li>
+​
+const myLi=myul.querySelector('li')
+undefined
+
+myLi.style.backgroundColor="green"
+'green'
+
+myLi.style.padding="10px"
+'10px'
+
+myLi.innerText
+'one'
+
+myLi.innerText="five"==>this way change the innerText
+'five' -->
+
+
+
+
+
+<!-- querySelectorAll-->
+<!-- document.querySelectorAll('li')//it returns a NodeList not a array 
+NodeList(3) [li, li, li]
+
+const tempLilList=document.querySelectorAll('li')
+undefined
+
+tempLilList[0].style.color='green'
+'green'
+
+tempLilList[0].style.backgroundColor='red'
+'red'
+
+const myH1=document.querySelectorAll('h1')
+undefined
+
+myH1
+NodeList [h1#title.headings]
+
+myH1[0].style.color='green'
+'green'
+
+tempLilList
+NodeList(3) [li, li, li]
+
+****use of for each**** (when there is a nodeList then use for-each loop for better)
+tempLilList.forEach(function (l){ 
+    l.style.backgroundColor='red'
+    l.style.padding='10px'
+})
+undefined -->
+
+
+
+<!-- how to use html collection -->
+
+<!-- document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempClassList=document.getElementsByClassName('list-item')
+undefined
+
+tempClassList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+//convert html collection to Array
+Array.from(tempClassList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+//store into a variable
+const myConvertArray=Array.from(tempClassList)
+undefined
+
+myConvertArray
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+//using for-each to change anything
+myConvertArray.forEach(function(li){
+    li.style.color='orange'
+})
+undefined -->
